@@ -14,9 +14,12 @@ import java.util.List;
 public class TestingGameTest {
     static List<Door> doors; // создаем три двери
 
+    // 1) методы лучше называть с маленькой буквы doors()
+    // 2) метод @BeforeALl должен быть статик, либо аннотировать весь класс с помощью @TestInstance(Lifecycle.PER_CLASS).
     @BeforeAll // можно использовать @BeforeAll, т.к. один и тот же список используется во всех тестах
     void Doors() {
         doors = new ArrayList<>();
+        //инициализацию дверей надо вынести в @BeforeEach, т.к. метод game.round удаляет дверь из списка
         doors.add(new Door(true));
         doors.add(new Door(false));
         doors.add(new Door(false));
