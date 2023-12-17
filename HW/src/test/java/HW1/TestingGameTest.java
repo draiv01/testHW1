@@ -1,8 +1,8 @@
 package HW1;
 
-import org.example.HW__1.Door;
-import org.example.HW__1.Game;
-import org.example.HW__1.Player;
+import org.example.HW1.Door;
+import org.example.HW1.Game;
+import org.example.HW1.Player;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
